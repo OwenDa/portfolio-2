@@ -16,12 +16,14 @@ function setParameters(event){
 }
 
 // Counter Variables
-let currentQty = 90; // To be set by user; example number for development only.
+let currentQty = 0; // To be set by user; example number for development only.
 let int = document.getElementById('count');
 let remaining;
 let unitDisplay = document.getElementById('unit-display');
 let message = document.getElementById('message');
 message.innerHTML = "Example message."
+
+let colorScheme; // Test variable.
 
 // Identify Buttons
 let plusButton = document.getElementById('plus');
@@ -45,7 +47,25 @@ function decrease() {
     calculateRemaning();
 }
 
+// Style change logic:
+if (currentQty >= threshold && currentQty < maxCapacity) {
+    colorScheme = "amber";
+    message = "You are nearning capacity.";
+} else if (currentQty === maxCapacity) {
+    colorScheme = "red";
+    message = "You have reached capacity.";
+} else if (currentQty > maxCapacity) {
+    colorScheme = "red-red";
+    message = "You have exceeded capacity."
+} else {
+    colorScheme = "Default green";
+    message = "All good.";
+}
 
 // EVENT LISTENERS
 plusButton.addEventListener('click', increase);
 minusButton.addEventListener('click', decrease);
+
+// FOR TESTING/DEVELOPMENT:
+console.log(colorScheme);
+console.log(message);
