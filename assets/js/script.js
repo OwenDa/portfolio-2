@@ -38,6 +38,7 @@ function increase() {
     currentQty += 1;
     int.innerHTML = currentQty;
     calculateRemaning();
+    styleChange();
 }
 
 /** Decreases the currentQty and updates the count accordingly */
@@ -45,27 +46,30 @@ function decrease() {
     currentQty -= 1;
     int.innerHTML = currentQty;
     calculateRemaning();
+    styleChange();
 }
 
 // Style change logic:
-if (currentQty >= threshold && currentQty < maxCapacity) {
-    colorScheme = "amber";
-    message = "You are nearning capacity.";
-} else if (currentQty === maxCapacity) {
-    colorScheme = "red";
-    message = "You have reached capacity.";
-} else if (currentQty > maxCapacity) {
-    colorScheme = "red-red";
-    message = "You have exceeded capacity."
-} else {
-    colorScheme = "Default green";
-    message = "All good.";
+function styleChange() {
+    if (currentQty >= threshold && currentQty < maxCapacity) {
+        colorScheme = "amber";
+        message = "You are nearing capacity.";
+    } else if (currentQty === maxCapacity) {
+        colorScheme = "red";
+        message = "You have reached capacity.";
+    } else if (currentQty > maxCapacity) {
+        colorScheme = "red-red";
+        message = "You have exceeded capacity."
+    } else {
+        colorScheme = "Default green";
+        message = "All good.";
+    }
+    // FOR TESTING/DEVELOPMENT:
+    console.log(colorScheme);
+    console.log(message);
 }
 
 // EVENT LISTENERS
 plusButton.addEventListener('click', increase);
 minusButton.addEventListener('click', decrease);
 
-// FOR TESTING/DEVELOPMENT:
-console.log(colorScheme);
-console.log(message);
