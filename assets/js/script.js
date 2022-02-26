@@ -1,31 +1,26 @@
 // FORM HANDLILNG
 let parameters = document.getElementById('parameters');
 parameters.addEventListener('submit', setParameters);
+let unitInput;
+let maxCapacity;
+let threshold;
 
 /** Gets user's form input and assigns those values to the appropriate variables.
  */
 function setParameters(event){
     event.preventDefault();
-    let unitInput = document.getElementById('unit-input').value;
+    unitInput = document.getElementById('unit-input').value;
     unitDisplay.innerHTML = unitInput;
     maxCapacity = parseInt(document.getElementById('max-input').value);
     threshold = parseInt(document.getElementById('threshold-input').value);
-    // For testing:
-    console.log(unitDisplay);
-    console.log(maxCapacity);
-    console.log(threshold);
 }
 
 // Counter Variables
-let currentQty = 90;
+let currentQty = 90; // To be set by user; example number for development only.
 let int = document.getElementById('count');
-int.innerHTML = currentQty;
-
 let unitDisplay = document.getElementById('unit-display');
-units.innerHTML = "examples";
-
 let message = document.getElementById('message');
-message.textContent = "Example message here."
+message.innerHTML = "Example message."
 
 // Identify Buttons
 let plusButton = document.getElementById('plus');
