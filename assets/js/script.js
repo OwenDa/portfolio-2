@@ -1,3 +1,13 @@
+// FORM HANDLILNG
+let parameters = document.getElementById('parameters');
+parameters.addEventListener('submit', setParameters);
+
+function setParameters(event){
+    event.preventDefault();
+    let unitInput = document.getElementById('unit-input').value;
+    unitDisplay.innerHTML = unitInput;
+}
+
 // Test element identification (count, units, message):
 let currentQty = 90;
 let int = document.getElementById('count');
