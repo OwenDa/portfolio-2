@@ -3,7 +3,7 @@ let currentQty = 90;
 let int = document.getElementById('count');
 int.innerHTML = currentQty;
 
-let units = document.getElementById('units');
+let unitDisplay = document.getElementById('unit-display');
 units.innerHTML = "examples";
 
 let message = document.getElementById('message');
