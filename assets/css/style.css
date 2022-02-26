@@ -25,3 +25,14 @@ body {
     font-size: 3rem;
 }
 
+#message {
+    margin: 5px 0 10px 0;
+}
+
+button {
+    font-size: 5rem;
+    height: 150px;
+    width: 150px;
+    margin: 5px 5px 0 5px;
+}
+
