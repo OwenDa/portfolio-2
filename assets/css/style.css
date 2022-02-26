@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucina Sans Unicode', 'Lucinda Grande', 'Lucinda Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #B8EAD1;
+    color: #0C343D;
+}
