@@ -21,48 +21,49 @@ let int = document.getElementById('count');
 let remaining;
 let unitDisplay = document.getElementById('unit-display');
 let message = document.getElementById('message');
-message.innerHTML = "Example message."
-
-let colorScheme; // Test variable.
+let colorScheme; // test variable
 
 // Identify Buttons
 let plusButton = document.getElementById('plus');
 let minusButton = document.getElementById('minus');
 
+/** Calculates the number of units until capacity is reached */
 function calculateRemaning() {
     remaining = (maxCapacity - currentQty);
 }
 
-/** Increases the currentQty and updates the count accordingly */
+/** Increases the currentQty and updates the UI accordingly */
 function increase() {
     currentQty += 1;
     int.innerHTML = currentQty;
     calculateRemaning();
-    styleChange();
+    updateUI();
 }
 
-/** Decreases the currentQty and updates the count accordingly */
+/** Decreases the currentQty and updates the UI accordingly */
 function decrease() {
     currentQty -= 1;
     int.innerHTML = currentQty;
     calculateRemaning();
-    styleChange();
+    updateUI();
 }
 
 // Style change logic:
-function styleChange() {
-    if (currentQty >= threshold && currentQty < maxCapacity) {
+function updateUI() {
+    if (Number.isNaN(remaining)) {
+        message.innerHTML = "";
+    } else if (currentQty >= threshold && currentQty < maxCapacity) {
         colorScheme = "amber";
-        message = "You are nearing capacity.";
+        message.innerHTML = "You are nearing capacity.";
     } else if (currentQty === maxCapacity) {
         colorScheme = "red";
-        message = "You have reached capacity.";
+        message.innerHTML = "You have reached capacity.";
     } else if (currentQty > maxCapacity) {
         colorScheme = "red-red";
-        message = "You have exceeded capacity."
+        message.innerHTML = "You have exceeded capacity."
     } else {
         colorScheme = "Default green";
-        message = "All good.";
+        message.innerHTML = "All good.";
     }
     // FOR TESTING/DEVELOPMENT:
     console.log(colorScheme);
