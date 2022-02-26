@@ -9,3 +9,19 @@ body {
     background-color: #B8EAD1;
     color: #0C343D;
 }
+
+#counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#count {
+    font-size: 12rem;
+}
+
+#units {
+    font-size: 3rem;
+}
+
