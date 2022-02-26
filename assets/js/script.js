@@ -18,6 +18,7 @@ function setParameters(event){
 // Counter Variables
 let currentQty = 90; // To be set by user; example number for development only.
 let int = document.getElementById('count');
+let remaining;
 let unitDisplay = document.getElementById('unit-display');
 let message = document.getElementById('message');
 message.innerHTML = "Example message."
@@ -26,16 +27,22 @@ message.innerHTML = "Example message."
 let plusButton = document.getElementById('plus');
 let minusButton = document.getElementById('minus');
 
+function calculateRemaning() {
+    remaining = (maxCapacity - currentQty);
+}
+
 /** Increases the currentQty and updates the count accordingly */
 function increase() {
     currentQty += 1;
     int.innerHTML = currentQty;
+    calculateRemaning();
 }
 
 /** Decreases the currentQty and updates the count accordingly */
 function decrease() {
     currentQty -= 1;
     int.innerHTML = currentQty;
+    calculateRemaning();
 }
 
 
