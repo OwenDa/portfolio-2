@@ -1,9 +1,13 @@
-// FORM HANDLILNG
+// FORM HANDLING
 let parameters = document.getElementById('parameters');
 parameters.addEventListener('submit', setParameters);
 let units;
 let maxCapacity;
 let threshold;
+
+// Validity & Checks (notes):
+// Done: Threshold (warning number) cannot be greater than maxCapacity (maximum number).
+// Done: Counter will not go below 0 (as negative quantities would be illogical and lead to error in most settings).
 
 /** Gets user's form input and assigns those values to the appropriate variables.
  */
@@ -15,10 +19,6 @@ function setParameters(event){
     threshold = parseInt(document.getElementById('threshold-input').value);
     checkInput();
 }
-
-// Validity & Checks (notes):
-// Done: Threshold (warning number) cannot be greater than maxCapacity (maximum number).
-// Done: Counter will not go below 0 (as negative quantities would be illogical and lead to error in most settings).
 
 /** Warns the user and throws error if the threshold(warning number) entered is greater than
  * their chosen maxCapacity value(maximum number that can be accomodated).
@@ -36,7 +36,6 @@ let int = document.getElementById('count');
 let remaining;
 let unitDisplay = document.getElementById('unit-display');
 let message = document.getElementById('message');
-let colorScheme; // test variable
 
 // Identify Buttons
 let plusButton = document.getElementById('plus');
@@ -58,6 +57,7 @@ function increase() {
 /** Decreases the currentQty and updates the UI accordingly. */
 function decrease() {
     if (currentQty <= 0) {
+        // Prevents currentQty from entering negative numbers.
         alert('Whoops! Cannot go below 0.');
         throw 'Error: Negative numbers are not permitted. Zero is the lowest permissable number.';
       } else {
@@ -89,9 +89,6 @@ function updateUI() {
         document.body.style.color = "#0C343D";
         message.innerHTML = `All good. ${remaining} ${units} remaining until capacity.`;
     }
-    // FOR TESTING/DEVELOPMENT:
-    console.log(colorScheme);
-    console.log(message);
 }
 
 // EVENT LISTENERS
