@@ -36,12 +36,6 @@ function checkInput() {
     container.style.pointerEvents = 'none';
 }
 
-// function openModal() {
-//     let container = document.getElementById('modal-container');
-//     container.style.opacity = 1;
-//     container.style.pointerEvents = "auto";
-// } 
-
 // COUNTER CONTROLS:
 
 // Counter Variables

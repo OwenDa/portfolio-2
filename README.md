@@ -18,6 +18,15 @@ Limited capacity is a commonplace consideration within event settings, as well a
   
 ### User Stories  
   
+
+## Testing  
+JavaScript code was run through JSHint.com with no errors or warnings.
+<img src="assets/images/js-hint-screencap.png" alt="JSHint.com identifies no errors and issues no warnings in relation to the JavaScript code." width="90%" height="auto"> 
+
+ 
+Google's [Lighthouse tool](https://developers.google.com/web/tools/lighthouse) in Chrome's Dev tools was used to generate scores on Performance, Accessibility, Best Practices and SEO. In each case, the site was scored 100.
+<img src="assets/images/lighthouse-pp2.png" alt="Google's Lighthouse scores the site at 100 on all tested variables." width="50%" height="auto">
+
 ## Deployment
 <details><summary>
 Click to Expand: Deployment Procedure
