@@ -1,4 +1,4 @@
-// FORM HANDLING
+// FORM HANDLING:
 let parameters = document.getElementById('parameters');
 parameters.addEventListener('submit', setParameters);
 let units;
@@ -29,6 +29,8 @@ function checkInput() {
         throw 'Error: threshold(warning number) must be lower than maxCapacity(maximum number).';
     }
 }
+
+// COUNTER CONTROLS:
 
 // Counter Variables
 let currentQty = 0;
@@ -68,30 +70,54 @@ function decrease() {
       }
 }
 
+// STYLE AND UI-CHANGE LOGIC:
+
 /** Checks current state and applies appropriate UI changes. */
 function updateUI() {
     if (Number.isNaN(remaining)) {
         message.innerHTML = ""; // Ensures "message" is empty in initial state.
     } else if (currentQty >= threshold && currentQty < maxCapacity) {
-        document.body.style.backgroundColor = "#FDBA6E";
-        document.body.style.color = "#0C343D";
-        message.innerHTML = `You are nearing capacity. Only ${remaining} remaining.`;
+        amberState(); // Triggers UI changes when user's threshold(warning number) is reached.
     } else if (currentQty === maxCapacity) {
-        document.body.style.backgroundColor = "#F1B7C4";
-        document.body.style.color = "#5F071C";
-        message.innerHTML = "You have reached capacity.";
+        redState(); // Triggers UI changes when user's maxCapacity(maximum number) is reached.
     } else if (currentQty > maxCapacity) {
-        document.body.style.backgroundColor = "#EC8D8D";
-        document.body.style.color = "#000000";
-        message.innerHTML = `You have exceeded the maximum capacity of ${maxCapacity}.`
+        overCapacityState(); // Triggers UI changes when currentQty exceeds the user's maxCapacity(maximum numbers).
     } else {
-        document.body.style.backgroundColor = "#B8EAD1";
-        document.body.style.color = "#0C343D";
-        message.innerHTML = `All good. ${remaining} ${units} remaining until capacity.`;
+        greenState();
     }
 }
 
-// EVENT LISTENERS
+// POSSIBLE STATES:
+
+/** Defines amberState for use in updateUI function (triggered when threshold is reached). */
+function amberState() {
+    document.body.style.backgroundColor = "#FDBA6E";
+    document.body.style.color = "#0C343D";
+    message.innerHTML = `You are nearing capacity. Only ${remaining} remaining.`;
+}
+
+/** Defines redState for use in updateUI function (trigged when maxCapacity is reached). */
+function redState() {
+    document.body.style.backgroundColor = "#F1B7C4";
+    document.body.style.color = "#5F071C";
+    message.innerHTML = "You have reached capacity.";
+}
+
+/** Defines overCapacityState for use in updateUI function (triggered when maxCapacity is exceeded). */
+function overCapacityState() {
+    document.body.style.backgroundColor = "#EC8D8D";
+    document.body.style.color = "#000000";
+    message.innerHTML = `You have exceeded the maximum capacity of ${maxCapacity}.`;
+}
+
+/** Defines greenState for use in updateUI function (default state). */
+function greenState() {
+    document.body.style.backgroundColor = "#B8EAD1";
+    document.body.style.color = "#0C343D";
+    message.innerHTML = `All good. ${remaining} ${units} remaining until capacity.`;
+}
+
+// EVENT LISTENERS:
 plusButton.addEventListener('click', increase);
 minusButton.addEventListener('click', decrease);
 
