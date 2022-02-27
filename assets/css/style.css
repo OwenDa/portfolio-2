@@ -10,10 +10,6 @@ body {
     color: #0C343D;
 }
 
-h1 {
-    margin: 10px 0 10px 0;
-}
-
 #modal-container {
     background-color: #B8EAD1;
     width: 100vw;
@@ -77,8 +73,16 @@ label {
 #counter-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#heading {
+    margin: 10px 0 60px 0;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
 }
 
 #count {
@@ -93,15 +97,16 @@ label {
     margin: 5px 0 10px 0;
     font-size: 1.2rem;
     width: 310px;
+    min-height: 55px;
     text-align: center;
-    padding: 0 0 5px 0;
+    padding: 2.5px;
 }
 
 button {
     font-size: 5rem;
     height: 150px;
     width: 150px;
-    margin: 5px 2.5px 20px 2.5px;
+    margin: 5px 2.5px 30px 2.5px;
 }
 
 /* Media Queries */

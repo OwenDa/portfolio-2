@@ -5,10 +5,6 @@ let units;
 let maxCapacity;
 let threshold;
 
-// Validity & Checks (notes):
-// Done: Threshold (warning number) cannot be greater than maxCapacity (maximum number).
-// Done: Counter will not go below 0 (as negative quantities would be illogical and lead to error in most settings).
-
 /** Gets user's form input and assigns those values to the appropriate variables.
  */
 function setParameters(event){
@@ -39,6 +35,12 @@ function checkInput() {
     container.style.opacity = 0;
     container.style.pointerEvents = 'none';
 }
+
+// function openModal() {
+//     let container = document.getElementById('modal-container');
+//     container.style.opacity = 1;
+//     container.style.pointerEvents = "auto";
+// } 
 
 // COUNTER CONTROLS:
 
@@ -101,9 +103,10 @@ function updateUI() {
 
 /** Defines amberState for use in updateUI function (triggered when threshold is reached). */
 function amberState() {
+    document.getElementById('message').style.border = "none";
     document.body.style.backgroundColor = "#FDBA6E";
     document.body.style.color = "#0C343D";
-    message.innerHTML = `You are nearing capacity. Only ${remaining} remaining.`;
+    message.innerHTML = `You are nearing capacity. <br> Only ${remaining} remaining.`;
 }
 
 /** Defines redState for use in updateUI function (trigged when maxCapacity is reached). */
@@ -115,6 +118,7 @@ function redState() {
 
 /** Defines overCapacityState for use in updateUI function (triggered when maxCapacity is exceeded). */
 function overCapacityState() {
+    document.getElementById('message').style.border = "medium solid #000000";
     document.body.style.backgroundColor = "#EC8D8D";
     document.body.style.color = "#000000";
     message.innerHTML = `You have exceeded the maximum capacity of ${maxCapacity}.`;
@@ -122,9 +126,10 @@ function overCapacityState() {
 
 /** Defines greenState for use in updateUI function (default state). */
 function greenState() {
+    document.getElementById('message').style.border = "none";
     document.body.style.backgroundColor = "#B8EAD1";
     document.body.style.color = "#0C343D";
-    message.innerHTML = `All good. ${remaining} ${units} remaining until capacity.`;
+    message.innerHTML = `All good. <br> ${remaining} ${units} remaining until capacity.`;
 }
 
 // EVENT LISTENERS:
