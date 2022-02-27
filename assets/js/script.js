@@ -21,12 +21,6 @@ function setParameters(event){
     closeModal();
 }
 
-function closeModal() {
-    let container = document.getElementsByClassName('modal-container');
-    container.className = "close-container";
-    console.log(container.className);
-}
-
 /** Warns the user and throws error if the threshold(warning number) entered is greater than
  * their chosen maxCapacity value(maximum number that can be accomodated).
  */
@@ -35,6 +29,15 @@ function checkInput() {
         alert('Houston, we have a problem! The maximum number must be higher than your warning number.');
         throw 'Error: threshold(warning number) must be lower than maxCapacity(maximum number).';
     }
+}
+
+/** Closes the modal-container and all contents, revealing the counter,
+ * and allows the user to click through the modal to use the counter.
+ */
+ function closeModal() {
+    let container = document.getElementById('modal-container');
+    container.style.opacity = 0;
+    container.style.pointerEvents = 'none';
 }
 
 // COUNTER CONTROLS:
