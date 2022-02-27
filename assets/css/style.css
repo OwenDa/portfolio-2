@@ -14,7 +14,7 @@ h1 {
     margin: 10px 0 10px 0;
 }
 
-#modal-container {
+.modal-container {
     background-color: #B8EAD1;
     width: 100vw;
     height: 100%;
@@ -24,6 +24,10 @@ h1 {
     position: fixed;
     top: 0;
     left: 0;
+}
+
+.close-container {
+    display: none;
 }
 
 #modal {

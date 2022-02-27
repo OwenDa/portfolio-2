@@ -18,6 +18,13 @@ function setParameters(event){
     maxCapacity = parseInt(document.getElementById('max-input').value);
     threshold = parseInt(document.getElementById('threshold-input').value);
     checkInput();
+    closeModal();
+}
+
+function closeModal() {
+    let container = document.getElementsByClassName('modal-container');
+    container.className = "close-container";
+    console.log(container.className);
 }
 
 /** Warns the user and throws error if the threshold(warning number) entered is greater than
