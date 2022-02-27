@@ -13,6 +13,20 @@ function setParameters(event){
     unitDisplay.innerHTML = units;
     maxCapacity = parseInt(document.getElementById('max-input').value);
     threshold = parseInt(document.getElementById('threshold-input').value);
+    checkInput();
+}
+
+// Validity & Checks (notes):
+// Done: Threshold (warning number) cannot be greater than maxCapacity (maximum number).
+
+/** Warns the user and throws error if the threshold(warning number) entered is greater than
+ * their chosen maxCapacity value(maximum number that can be accomodated).
+ */
+function checkInput() {
+    if (threshold > maxCapacity) {
+        alert('Some message here');
+        throw 'Some message here.';
+    }
 }
 
 // Counter Variables
@@ -27,12 +41,12 @@ let colorScheme; // test variable
 let plusButton = document.getElementById('plus');
 let minusButton = document.getElementById('minus');
 
-/** Calculates the number of units until capacity is reached */
+/** Calculates the number of units until capacity is reached. */
 function calculateRemaning() {
     remaining = (maxCapacity - currentQty);
 }
 
-/** Increases the currentQty and updates the UI accordingly */
+/** Increases the currentQty and updates the UI accordingly. */
 function increase() {
     currentQty += 1;
     int.innerHTML = currentQty;
@@ -40,7 +54,7 @@ function increase() {
     updateUI();
 }
 
-/** Decreases the currentQty and updates the UI accordingly */
+/** Decreases the currentQty and updates the UI accordingly. */
 function decrease() {
     currentQty -= 1;
     int.innerHTML = currentQty;
@@ -48,7 +62,7 @@ function decrease() {
     updateUI();
 }
 
-// Style change logic:
+/** Checks current state and applies appropriate UI changes. */
 function updateUI() {
     if (Number.isNaN(remaining)) {
         message.innerHTML = ""; // Ensures "message" is empty in initial state.
