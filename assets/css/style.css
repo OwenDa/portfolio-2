@@ -10,6 +10,22 @@ body {
     color: #0C343D;
 }
 
+h1 {
+    margin: 10px;
+}
+
+#modal-container {
+    background-color: #e6b8ea;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 10%;
+    left: 0;
+}
+
 #counter-container {
     display: flex;
     flex-direction: column;
