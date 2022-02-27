@@ -18,14 +18,15 @@ function setParameters(event){
 
 // Validity & Checks (notes):
 // Done: Threshold (warning number) cannot be greater than maxCapacity (maximum number).
+// Done: Counter will not go below 0 (as negative quantities would be illogical and lead to error in most settings).
 
 /** Warns the user and throws error if the threshold(warning number) entered is greater than
  * their chosen maxCapacity value(maximum number that can be accomodated).
  */
 function checkInput() {
     if (threshold > maxCapacity) {
-        alert('Some message here');
-        throw 'Some message here.';
+        alert('Houston, we have a problem! The maximum number must be higher than your warning number.');
+        throw 'Error: threshold(warning number) must be lower than maxCapacity(maximum number).';
     }
 }
 
@@ -56,10 +57,15 @@ function increase() {
 
 /** Decreases the currentQty and updates the UI accordingly. */
 function decrease() {
+    if (currentQty <= 0) {
+        alert('Whoops! Cannot go below 0.');
+        throw 'Error: Negative numbers are not permitted. Zero is the lowest permissable number.';
+      } else {
     currentQty -= 1;
     int.innerHTML = currentQty;
     calculateRemaning();
     updateUI();
+      }
 }
 
 /** Checks current state and applies appropriate UI changes. */
