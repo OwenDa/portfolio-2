@@ -30,12 +30,12 @@ body {
     background-color: #ffffff;
     margin: 20px 0 0 0;
     border: 0;
-    border-radius: 2.5%;
+    border-radius: 2%;
 }
 
 p {
     font-size: 1.2rem;
-    margin: 0 0 20px 0;
+    margin: 15px 0 20px 0;
 }
 
 #questions {
@@ -112,7 +112,7 @@ button {
 /* Media Queries */
 @media screen and (max-width: 780px) {
     #questions {
-    margin: 3rem 0 2rem 0rem;
+    margin: 3rem 0 2rem 0;
     font-size: 1.2rem;
     display: grid;
     grid-template-columns: 1fr;
