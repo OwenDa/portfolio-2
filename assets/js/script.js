@@ -54,15 +54,23 @@ function updateUI() {
         message.innerHTML = "";
     } else if (currentQty >= threshold && currentQty < maxCapacity) {
         colorScheme = "amber";
+        document.body.style.backgroundColor = "#FDBA6E";
+        document.body.style.color = "#0C343D";
         message.innerHTML = "You are nearing capacity.";
     } else if (currentQty === maxCapacity) {
         colorScheme = "red";
+        document.body.style.backgroundColor = "#F1B7C4";
+        document.body.style.color = "#5F071C";
         message.innerHTML = "You have reached capacity.";
     } else if (currentQty > maxCapacity) {
         colorScheme = "red-red";
+        document.body.style.backgroundColor = "#EC8D8D";
+        document.body.style.color = "#000000";
         message.innerHTML = "You have exceeded capacity."
     } else {
         colorScheme = "Default green";
+        document.body.style.backgroundColor = "#B8EAD1";
+        document.body.style.color = "#0C343D";
         message.innerHTML = "All good.";
     }
     // FOR TESTING/DEVELOPMENT:
