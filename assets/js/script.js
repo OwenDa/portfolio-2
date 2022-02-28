@@ -97,7 +97,6 @@ function updateUI() {
 
 /** Defines amberState for use in updateUI function (triggered when threshold is reached). */
 function amberState() {
-    document.getElementById('message').style.border = "none";
     document.body.style.backgroundColor = "#FDBA6E";
     document.body.style.color = "#0C343D";
     message.innerHTML = `You are nearing capacity. <br> Only ${remaining} remaining.`;
@@ -105,6 +104,7 @@ function amberState() {
 
 /** Defines redState for use in updateUI function (trigged when maxCapacity is reached). */
 function redState() {
+    document.getElementById('message').style.border = "none";
     document.body.style.backgroundColor = "#F1B7C4";
     document.body.style.color = "#5F071C";
     message.innerHTML = "You have reached capacity.";
