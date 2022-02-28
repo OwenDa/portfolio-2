@@ -2,8 +2,8 @@
 
 ## Contents
 1. [Purpose](#purpose)  
-    - Problem Statement
-    - User Stories
+    - [Problem Statement](#problem-statement)
+    - [User Stories](#user-stories)
 2. Tech Stack
 3. Features
 4. Testing
@@ -15,9 +15,38 @@
 
 ### Problem Statement  
 Limited capacity is a commonplace consideration within event settings, as well as many entertainment, food services and  retail settings. In each of these cases, an organisation may have the capacity to accomodate a fixed number of patrons, and tracking the number of patrons already accomodated may be of paramount importance to avoid overcrowding, inability to adequately provide services, and the breach of fire safety regulations.  
+
+While many simple counters exist, few of these possess the option for a user set their own upper limit and most are designed to count upwards indefinitely. The use of such a tool when dealing with finite numbers creates a number of issues which became particularly apparent during public health restrictions enacted in response to the Covid-19 pandemic which necessitated the widespread use of occupancy-monitoring.
+
+With a background in event management, the developer's goal was to create a tool that could simply and effectively address this problem in an intelligent manner. However, the tool is certainly not limited to use in events, and need not be used to count people but might equally be employed to count a finite resource such as vaccines being administered at walk-in clinics, for example. Similarly, the site might be integrated into an existing UI as part of a suite of tools used within a that particular business or environment.
   
 ### User Stories  
+  **Types of User** 
+  + Restauranteurs  
+  + Entertainment environments with walk-in availablity
+  + Transport services  
+  + Event Organisers  
+  + Clinics, distribution centers and similar settings offering walk-in services dependent on finite resources or limited capacity
+  + Employees of the above
+  + and more.
   
+  + As an organiser, manager or supervisor, I want to...  
+    - Easily track occupancy/resources in a limited-capacity or fixed-resources situation.  
+    - Set the parameters for capacity once per use, and not have to consult notes or any additional reminders of the maximum allowable capacity.  
+    - Use a UI that allows me to name the units being counted in a way that seems logical and appropriate to my industy (e.g. people, tables, seats, etc.)
+    - Hand control of the UI over to a member of staff without needing to relay instructions or explicity state the maximum allowable capacity to each staff member.  
+  
+  + As a staff member or other end-user, I want to...  
+    - Track occupancy and capacity without needing to undertake a significant learning curve.
+    - Hand control of the UI over to a colleague without the need to explain its functionality, controls or parameters in detail.
+    - Use an intuive system that doesn't visually overwhelm me and allows me to see key information at a glance.
+    - Use a system that will remember the maximum capacity for me and negate the need to relay this information to colleagues when taking breaks or changing roles.
+    - Be reminded whenever nearing capacity so that I can respond with whatever action might be appropriate in my given situation, such as asking new attendees to wait until others have departed.
+    - Be informed when the event has reached full capacity.
+    - Use a system that will not cease to function in the event that capacity is exceeded, whether in reality or through user error, but notifies me of the fact and allows me to correct the situation.
+
+
+## Features
 
 ## Testing  
 JavaScript code was run through JSHint.com with no errors or warnings.

@@ -129,4 +129,3 @@ function greenState() {
 // EVENT LISTENERS:
 plusButton.addEventListener('click', increase);
 minusButton.addEventListener('click', decrease);
-
