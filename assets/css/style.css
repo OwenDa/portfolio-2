@@ -8,7 +8,6 @@
 body {
     background-color: #B8EAD1;
     color: #0C343D;
-    height: 100%;
 }
 
 .modal-container {
@@ -22,14 +21,13 @@ body {
     top: 0;
     left: 0;
     transition: opacity 1s;
-    overflow: scroll;
 }
 
 .modal {
     width: 90%;
     max-height: 100vh;
     padding: 2.5rem;
-    position: fixed;
+    /* position: fixed; */
     background-color: #ffffff;
     margin: 1.25rem 0 0 0;
     border: 0;
