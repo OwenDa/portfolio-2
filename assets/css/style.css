@@ -28,14 +28,14 @@ body {
     padding: 2.5rem;
     position: fixed;
     background-color: #ffffff;
-    margin: 20px 0 0 0;
+    margin: 1.25rem 0 0 0;
     border: 0;
     border-radius: 2%;
 }
 
 p {
     font-size: 1.2rem;
-    margin: 15px 0 20px 0;
+    margin: .9rem 0 1.25rem 0;
 }
 
 #questions {
@@ -48,21 +48,21 @@ p {
 label {
     text-align: right;
     font-size: 1.2rem;
-    margin: 2px 7.5px 20px 15px;
+    margin: .125rem .46rem 1.25rem .93rem;
 }
 
 .answer-box {
     text-align: left;
-    margin: 2px 0 20px 10px;
-    min-height: 30px;
+    margin: .125rem 0 1.25rem .93rem;
+    min-height: 1.87rem;
     font-size: 1.2rem;
-    padding: .5px;
+    padding: .03rem;
 }
 
 #begin-button {
     font-size: 1.8rem;
     padding: .5rem;
-    width: 100px;
+    width: 6.25rem;
     background-color: #63a081;
     color: #ffffff;
     border-radius: 5%;
@@ -83,8 +83,8 @@ label {
 }
 
 #heading {
-    margin: 10px 0 60px 0;
-    font-size: 32px;
+    margin: .625rem 0 3.75rem 0;
+    font-size: 2rem;
     font-weight: 700;
     text-align: left;
 }
@@ -98,19 +98,19 @@ label {
 }
 
 #message {
-    margin: 5px 0 10px 0;
+    margin: .3rem 0 .62rem 0;
     font-size: 1.2rem;
-    width: 310px;
-    min-height: 55px;
+    width: 19rem;
+    min-height: 3.5rem;
     text-align: center;
-    padding: 2.5px;
+    padding: .16rem;
 }
 
 button {
     font-size: 5rem;
-    height: 150px;
-    width: 150px;
-    margin: 5px 2.5px 30px 2.5px;
+    height: 9.4rem;
+    width: 9.4rem;
+    margin: .3rem .16rem 1.9rem .16rem;
 }
 
 /* Media Queries */
@@ -125,12 +125,12 @@ button {
     label {
         text-align: left;
         font-size: 1.2rem;
-        margin: 2px 0 10px 2px;
+        margin: .13rem 0 .63rem .13rem;
     }
 
     .answer-box {
         text-align: left;
-        margin: 2px 0 20px 2px;
+        margin: .13rem 0 1.25rem .13rem;
     }
 
     #modal {
