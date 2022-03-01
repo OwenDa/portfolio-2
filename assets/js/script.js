@@ -49,12 +49,14 @@ function checkInput() {
     container.style.opacity = 0;
     container.style.pointerEvents = 'none';
     // and is set to display: none
-    container.className = "container-hide";
+    container.className = 'container-hide';
     // counterContainer becomes visible to screenreaders:
     let counterContainer = document.getElementById('counter-container');
-    counterContainer.className = "container-show";
+    counterContainer.className = 'container-show';
     // and updates to the currentquantity will be announced:
-    counterContainer.ariaLive = "assertive";
+    counterContainer.ariaLive = 'assertive';
+    message.tabIndex = -1;
+    message.focus();
 }
 
 /** Calculates the number of units until capacity is reached. */
