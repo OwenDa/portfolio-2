@@ -7,6 +7,9 @@
     <meta name="description" content="Keep track of any finite resource, such as seats, tables or available spaces at an event, to ensure you don't exceed capacity.">
     <meta name="keywords" content="counter, capacity, maximum capacity, online counter, attendance tracker, capacity tracker">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" sizes="16x16"  href="favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
     <title>Capacity Counter</title>
 </head>
 <body>
@@ -31,7 +34,7 @@
         </div>
     </div>
 
-    <div id="counter-container">
+    <div id="counter-container" aria-hidden="true">
         <div id="heading">Capacity Counter</div>
         <div>
             <span id="count">0</span>
@@ -40,8 +43,8 @@
 
         <div id="message"></div>
         <div id="button-div">
-            <button id="minus"> - </button>
-            <button id="plus"> + </button>
+            <button id="minus" aria-label="Decrease"> - </button>
+            <button id="plus" aria-label="Increase"> + </button>
         </div>
     </div>
     <script src="assets/js/script.js"></script>

@@ -27,6 +27,11 @@ function checkInput() {
     }
 }
 
+// function ariaReset() {
+//     let counterContainer = document.getElementById('counter-container');
+//     counterContainer.setAttribute('aria-hidden', 'false');
+// }
+
 /** Closes the modal-container and all contents, revealing the counter,
  * and allows the user to click through the modal to use the counter.
  */
@@ -34,6 +39,9 @@ function checkInput() {
     let container = document.getElementById('modal-container');
     container.style.opacity = 0;
     container.style.pointerEvents = 'none';
+    let counterContainer = document.getElementById('counter-container');
+    counterContainer.setAttribute('aria-hidden', 'false')
+    counterContainer.setAttribute('aria-live', 'assertive');
 }
 
 // COUNTER CONTROLS:
