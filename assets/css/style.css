@@ -8,12 +8,13 @@
 body {
     background-color: #B8EAD1;
     color: #0C343D;
+    margin: .2rem;
 }
 
 .modal-container {
     background-color: #B8EAD1;
     width: 100vw;
-    height: 100vh;
+    max-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
