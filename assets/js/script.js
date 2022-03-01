@@ -5,11 +5,18 @@ let units;
 let maxCapacity;
 let threshold;
 
-/** Set focus on the first input field to save the user having to click into it.
- */
-window.onload = function() {
-    document.getElementById('unit-input').focus();
-};
+// COUNTER CONTROLS:
+
+// Counter Variables
+let currentQty = 0;
+let int = document.getElementById('count');
+let remaining;
+let unitDisplay = document.getElementById('unit-display');
+let message = document.getElementById('message');
+
+// Identify Buttons
+let plusButton = document.getElementById('plus');
+let minusButton = document.getElementById('minus');
 
 /** Gets user's form input and assigns those values to the appropriate variables.
  */
@@ -37,23 +44,18 @@ function checkInput() {
  * and allows the user to click through the modal to use the counter.
  */
  function closeModal() {
+     // modal fades out:
     let container = document.getElementById('modal-container');
     container.style.opacity = 0;
     container.style.pointerEvents = 'none';
+    // and is set to display: none
+    container.className = "container-hide";
+    // counterContainer becomes visible to screenreaders:
+    let counterContainer = document.getElementById('counter-container');
+    counterContainer.className = "container-show";
+    // and updates to the currentquantity will be announced:
+    counterContainer.ariaLive = "assertive";
 }
-
-// COUNTER CONTROLS:
-
-// Counter Variables
-let currentQty = 0;
-let int = document.getElementById('count');
-let remaining;
-let unitDisplay = document.getElementById('unit-display');
-let message = document.getElementById('message');
-
-// Identify Buttons
-let plusButton = document.getElementById('plus');
-let minusButton = document.getElementById('minus');
 
 /** Calculates the number of units until capacity is reached. */
 function calculateRemaning() {

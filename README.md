@@ -6,9 +6,9 @@
     - [User Stories](#user-stories)
 2. [Tech Stack](#tech-stack)
 3. [Features](#features)
-4. Testing
+4. [Testing](#testing)
 5. [Deployment](#deployment)
-6. Acknowledgements
+6. [Acknowledgements](#acknowledgements)
 
 ## Purpose
 *Capacity Counter* is a tool for setting and tracking capacity in any situation where a pre-determined finite number of units can be accommodated. 
@@ -73,11 +73,16 @@ When the current count is below the threshold, the UI uses a soft green backgrou
 Each of these states is reversible. This means that, in situations where the count can logically decrease (such as patrons exiting a store), the user can decrease the count and restore the previous state(s) accordingly. However, the count cannot descend below zero as this would be illogical in the scenarios for which the tool is intended. If the user attempts to descrease the count below zero, the action is disallowed and an error message is dipslayed.
 
 ## Testing  
-JavaScript code was run through JSHint.com with no errors or warnings.
+In large part, testing was carried out manually through the development process, checking that each function worked as expected and checking whether various user-behaviours or choices were appropriately handled.  
+  
+For testing the contrast level of the various background and font colours used, [Coolers.co](https://coolors.co/contrast-checker) was employed, and in actual fact, the colours that Coolers uses for its own error communication (insufficient contrast) were adopted as the perfect balance for the "red state" (at capacity) that the developer had in mind.  
+
+JavaScript code was run through JSHint.com with no errors or warnings.  
 <img src="assets/images/js-hint-screencap.png" alt="JSHint.com identifies no errors and issues no warnings in relation to the JavaScript code." width="90%" height="auto"> 
 
- 
-Google's [Lighthouse tool](https://developers.google.com/web/tools/lighthouse) in Chrome's Dev tools was used to generate scores on Performance, Accessibility, Best Practices and SEO. In each case, the site was scored 100.
+User testing was carried out by students and allumni of [Code Institute](https://codeinstitute.net).  
+    
+[Google's Lighthouse tool](https://developers.google.com/web/tools/lighthouse) in Chrome's Dev tools was used to generate scores on Performance, Accessibility, Best Practices and SEO. In each case, the site was scored 100.  
 <img src="assets/images/lighthouse-pp2.png" alt="Google's Lighthouse scores the site at 100 on all tested variables." width="50%" height="auto">
 
 ## Deployment
@@ -101,3 +106,9 @@ Forking a repository does not create locally-stored copies of its files on your 
 </details>  
   
 ## Acknowledgements  
+1. Favicon via [WebsitePlanet.com's Favicon Generator](https://www.websiteplanet.com/webtools/favicon-generator/).
+2. Although it differs somewhat, the mechanics for the modal window can be credited to this [video tutorial by Florin Pop on Youtube](https://www.youtube.com/watch?v=XH5OW46yO8I).  
+3. As mentioned in [Testing](#testing), thanks are owed to students and allumni of [Code Institute](https://codeinstitute.net) for user testing.
+4. The developer's mentor is also owed thanks, as is [Code Institute](https://codeinstitute.net).
+5. The exact colours used in the UI's "red state" were chosen based on a colour pairing used on the site [Coolers.co](https://coolors.co).  
+6. [Stack Overflow](https://stackoverflow.com/) was consulted several times, largely to verify syntax.
