@@ -9,7 +9,7 @@ let threshold;
  */
 window.onload = function() {
     document.getElementById('unit-input').focus();
-}
+};
 
 /** Gets user's form input and assigns those values to the appropriate variables.
  */
@@ -21,7 +21,6 @@ function setParameters(event){
     threshold = parseInt(document.getElementById('threshold-input').value);
     checkInput();
     closeModal();
-    ariaReset();
 }
 
 /** Warns the user and throws error if the threshold(warning number) entered is greater than
@@ -41,9 +40,6 @@ function checkInput() {
     let container = document.getElementById('modal-container');
     container.style.opacity = 0;
     container.style.pointerEvents = 'none';
-    let counterContainer = document.getElementById('counter-container');
-    counterContainer.setAttribute('aria-hidden', 'false')
-    counterContainer.setAttribute('aria-live', 'assertive');
 }
 
 // COUNTER CONTROLS:
@@ -139,5 +135,3 @@ function greenState() {
 // EVENT LISTENERS:
 plusButton.addEventListener('click', increase);
 minusButton.addEventListener('click', decrease);
-let beginButton = getElementById('begin-button');
-beginButton.addEventListener('click', ariaReset);
