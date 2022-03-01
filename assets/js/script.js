@@ -88,9 +88,7 @@ function decrease() {
 
 /** Checks current state and applies appropriate UI changes. */
 function updateUI() {
-    if (Number.isNaN(remaining)) {
-        message.innerHTML = ""; // Ensures "message" is empty in initial state.
-    } else if (currentQty >= threshold && currentQty < maxCapacity) {
+    if (currentQty >= threshold && currentQty < maxCapacity) {
         amberState(); // Triggers UI changes when user's threshold(warning number) is reached.
     } else if (currentQty === maxCapacity) {
         redState(); // Triggers UI changes when user's maxCapacity(maximum number) is reached.
