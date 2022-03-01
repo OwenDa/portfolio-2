@@ -5,6 +5,12 @@ let units;
 let maxCapacity;
 let threshold;
 
+/** Set focus on the first input field to save the user having to click into it.
+ */
+window.onload = function() {
+    document.getElementById('unit-input').focus();
+}
+
 /** Gets user's form input and assigns those values to the appropriate variables.
  */
 function setParameters(event){
@@ -15,6 +21,7 @@ function setParameters(event){
     threshold = parseInt(document.getElementById('threshold-input').value);
     checkInput();
     closeModal();
+    ariaReset();
 }
 
 /** Warns the user and throws error if the threshold(warning number) entered is greater than
@@ -26,11 +33,6 @@ function checkInput() {
         throw 'Error: threshold(warning number) must be lower than maxCapacity(maximum number).';
     }
 }
-
-// function ariaReset() {
-//     let counterContainer = document.getElementById('counter-container');
-//     counterContainer.setAttribute('aria-hidden', 'false');
-// }
 
 /** Closes the modal-container and all contents, revealing the counter,
  * and allows the user to click through the modal to use the counter.
@@ -137,3 +139,5 @@ function greenState() {
 // EVENT LISTENERS:
 plusButton.addEventListener('click', increase);
 minusButton.addEventListener('click', decrease);
+let beginButton = getElementById('begin-button');
+beginButton.addEventListener('click', ariaReset);
