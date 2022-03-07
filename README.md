@@ -141,4 +141,5 @@ Forking a repository does not create locally-stored copies of its files on your 
 4. The developer's mentor is also owed thanks, as is [Code Institute](https://codeinstitute.net).
 5. The exact colours used in the UI's "red state" were chosen based on a colour pairing used on the site [Coolers.co](https://coolors.co).  
 6. [Stack Overflow](https://stackoverflow.com/) was consulted several times, largely to verify syntax.  
-7. As indicated by the automatically generated credit preserved in the CSS file, the CSS code was prefixed by [Autoprefixer](https://autoprefixer.github.io).
+7. As indicated by the automatically generated credit preserved in the CSS file, the CSS code was prefixed by [Autoprefixer](https://autoprefixer.github.io).  
+8. This [Nathan Sebhastian article concerning confirmation dialogs](https://sebhastian.com/javascript-confirmation-yes-no/) was used for reference in setting up the reset option.
