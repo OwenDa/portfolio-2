@@ -14,9 +14,10 @@ let remaining;
 let unitDisplay = document.getElementById('unit-display');
 let message = document.getElementById('message');
 
-// Identify Buttons
+// Identify Buttons etc.
 let plusButton = document.getElementById('plus');
 let minusButton = document.getElementById('minus');
+let resetButton = document.getElementById('reset');
 
 /** Gets user's form input and assigns those values to the appropriate variables.
  */
@@ -134,6 +135,15 @@ function greenState() {
     message.innerHTML = `All good. <br> ${remaining} ${units} remaining until capacity.`;
 }
 
+/** Confirms the user's intention before reloading the page to start over with new parameters */
+function confirmReset() {
+    let confirmReset = confirm("Click OK to delete your current settings and start over.");
+    if (confirmReset) {
+        document.location.reload(true);
+    }
+}
+
 // EVENT LISTENERS:
 plusButton.addEventListener('click', increase);
 minusButton.addEventListener('click', decrease);
+resetButton.addEventListener('click', confirmReset);
