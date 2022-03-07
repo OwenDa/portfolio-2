@@ -108,11 +108,10 @@ label {
     display: none;
 }
 
-#heading {
+#counter-container h2 {
     margin: 10px 0 30px 0;
     font-size: 32px;
     font-weight: 700;
-    text-align: left;
 }
 
 #count {
@@ -139,8 +138,9 @@ button {
     margin: 5px 2px 30px 2px;
 }
 
-#reset {
+#reset, #reset p {
     text-align: center;
+    margin: 0;
 }
 
 /* Media Queries */
