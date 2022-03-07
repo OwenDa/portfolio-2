@@ -139,6 +139,10 @@ button {
     margin: 5px 2px 30px 2px;
 }
 
+img + p {
+    text-align: center;
+}
+
 /* Media Queries */
 @media screen and (max-width: 780px) {
     #questions {
