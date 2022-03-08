@@ -28,24 +28,25 @@ With a background in event management, the developer's goal was to create a tool
   + Event Organisers  
   + Clinics, distribution centers and similar settings offering walk-in services dependent on finite resources or limited capacity
   + Employees of the above
-  + and more.
+  + and more.  
+   
+     
+  **As an organiser, manager or supervisor, I want to...**  
+  + Easily track occupancy/resources in a limited-capacity or fixed-resources situation.  
+  + Set the parameters for capacity once per use, and not have to consult notes or any additional reminders of the maximum allowable capacity.  
+  + Use a UI that allows me to name the units being counted in a way that seems logical and appropriate to my industry (e.g. people, tables, seats, etc.)
+  + Hand control of the UI over to a member of staff without needing to relay instructions or explicitly state the maximum allowable capacity to each staff member.  
   
-  + As an organiser, manager or supervisor, I want to...  
-    - Easily track occupancy/resources in a limited-capacity or fixed-resources situation.  
-    - Set the parameters for capacity once per use, and not have to consult notes or any additional reminders of the maximum allowable capacity.  
-    - Use a UI that allows me to name the units being counted in a way that seems logical and appropriate to my industry (e.g. people, tables, seats, etc.)
-    - Hand control of the UI over to a member of staff without needing to relay instructions or explicitly state the maximum allowable capacity to each staff member.  
-  
-  + As a staff member or other end-user, I want to...  
-    - Track occupancy and capacity without needing to undertake a significant learning curve.
-    - Hand control of the UI over to a colleague without the need to explain its functionality, controls or parameters in detail.
-    - Use an intuitive system that doesn't visually overwhelm me and allows me to see key information at a glance.
-    - Use a system that will remember the maximum capacity for me and negate the need to relay this information to colleagues when taking breaks or changing roles.
-    - Be reminded whenever nearing capacity so that I can respond with whatever action might be appropriate in my given situation, such as asking new attendees to wait until others have departed.
-    - Have this reminder be appropriate to my situation; for example, a warning 5 units before capacity might be appropriate where the maximum capacity is 50 and less appropriate in a situation where the maximum capacity is 500.
-    - Have access to a running count on the number of units remaining before capacity is reached, so that I can make informed decisions and plan ahead; for example, when faced with a group of 10 people wishing to enter an event, I want to know whether capacity is likely to be exceeded by admitting the entire party at this time.
-    - Be informed when the event has reached full capacity.
-    - Use a system that will not cease to function if capacity is exceeded, whether in reality or through user error, but notifies me of the fact and allows me to correct the situation.  
+  **As a staff member or other end-user, I want to...**  
+  + Track occupancy and capacity without needing to undertake a significant learning curve.
+  + Hand control of the UI over to a colleague without the need to explain its functionality, controls or parameters in detail.
+  + Use an intuitive system that doesn't visually overwhelm me and allows me to see key information at a glance.
+  + Use a system that will remember the maximum capacity for me and negate the need to relay this information to colleagues when taking breaks or changing roles.
+  + Be reminded whenever nearing capacity so that I can respond with whatever action might be appropriate in my given situation, such as asking new attendees to wait until others have departed.
+  + Have this reminder be appropriate to my situation; for example, a warning 5 units before capacity might be appropriate where the maximum capacity is 50 and less appropriate in a situation where the maximum capacity is 500.
+  + Have access to a running count on the number of units remaining before capacity is reached, so that I can make informed decisions and plan ahead; for example, when faced with a group of 10 people wishing to enter an event, I want to know whether capacity is likely to be exceeded by admitting the entire party at this time.
+  + Be informed when the event has reached full capacity.
+  + Use a system that will not cease to function if capacity is exceeded, whether in reality or through user error, but notifies me of the fact and allows me to correct the situation.  
   
 ## Tech Stack  
 1. Languages

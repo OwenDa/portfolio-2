@@ -9,7 +9,7 @@ let threshold;
 
 // Counter Variables
 let currentQty = 0;
-let int = document.getElementById('count');
+let count = document.getElementById('count');
 let remaining;
 let unitDisplay = document.getElementById('unit-display');
 let message = document.getElementById('message');
@@ -68,7 +68,7 @@ function calculateRemaning() {
 /** Increases the currentQty and updates the UI accordingly. */
 function increase() {
     currentQty += 1;
-    int.innerHTML = currentQty;
+    count.innerHTML = currentQty;
     calculateRemaning();
     updateUI();
 }
@@ -81,7 +81,7 @@ function decrease() {
         throw 'Error: Negative numbers are not permitted. Zero is the lowest permissable number.';
       } else {
     currentQty -= 1;
-    int.innerHTML = currentQty;
+    count.innerHTML = currentQty;
     calculateRemaning();
     updateUI();
       }
