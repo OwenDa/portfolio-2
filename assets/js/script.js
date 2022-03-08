@@ -1,6 +1,5 @@
 // FORM HANDLING:
 let parameters = document.getElementById('parameters');
-parameters.addEventListener('submit', setParameters);
 let units;
 let maxCapacity;
 let threshold;
@@ -21,7 +20,7 @@ let resetButton = document.getElementById('reset');
 
 /** Gets user's form input and assigns those values to the appropriate variables.
  */
-function setParameters(event){
+function onParametersSubmit(event){
     event.preventDefault();
     units = document.getElementById('unit-input').value;
     unitDisplay.innerHTML = units;
@@ -143,7 +142,12 @@ function confirmReset() {
     }
 }
 
-// EVENT LISTENERS:
-plusButton.addEventListener('click', increase);
-minusButton.addEventListener('click', decrease);
-resetButton.addEventListener('click', confirmReset);
+function initEventListeners() {
+    // EVENT LISTENERS:
+    parameters.addEventListener('submit', onParametersSubmit);
+    plusButton.addEventListener('click', increase);
+    minusButton.addEventListener('click', decrease);
+    resetButton.addEventListener('click', confirmReset);
+}
+
+initEventListeners();
