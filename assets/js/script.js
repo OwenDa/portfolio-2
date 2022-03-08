@@ -148,6 +148,13 @@ function initEventListeners() {
     plusButton.addEventListener('click', increase);
     minusButton.addEventListener('click', decrease);
     resetButton.addEventListener('click', confirmReset);
+    /* For accessibility, the following ensures that the Enter key will trigger the same event as a click event. Credit for this solution to: https://stackoverflow.com/questions/14542062/eventlistener-enter-key */
+    resetButton.addEventListener('keypress', function(e){
+        if (e.key === 'Enter') {
+            confirmReset();
+        }
+    })
+
 }
 
 initEventListeners();
