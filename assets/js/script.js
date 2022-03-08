@@ -1,8 +1,6 @@
 // FORM HANDLING:
 let parameters = document.getElementById('parameters');
-let units;
-let maxCapacity;
-let threshold;
+let units, maxCapacity, threshold;
 
 // COUNTER CONTROLS:
 
@@ -69,7 +67,7 @@ function incrementCounter() {
     currentQty += 1;
     count.innerHTML = currentQty;
     calculateRemaning();
-    updateUI();
+    selectState();
 }
 
 /** Decreases the currentQty and updates the UI accordingly. */
@@ -82,56 +80,61 @@ function decrementCounter() {
     currentQty -= 1;
     count.innerHTML = currentQty;
     calculateRemaning();
-    updateUI();
+    selectState();
       }
 }
 
 // STYLE AND UI-CHANGE LOGIC:
 
-/** Checks current state and applies appropriate UI changes. */
-function updateUI() {
+/** Determins the current state and applies appropriate case. */
+function selectState() {
     if (currentQty >= threshold && currentQty < maxCapacity) {
-        amberState(); // Triggers UI changes when user's threshold(warning number) is reached.
+        updateUI('amber'); // Triggers UI changes when user's threshold(warning number) is reached.
     } else if (currentQty === maxCapacity) {
-        redState(); // Triggers UI changes when user's maxCapacity(maximum number) is reached.
+        updateUI('red'); // Triggers UI changes when user's maxCapacity(maximum number) is reached.
     } else if (currentQty > maxCapacity) {
-        overCapacityState(); // Triggers UI changes when currentQty exceeds the user's maxCapacity(maximum numbers).
+        updateUI('error'); // Triggers UI changes when currentQty exceeds the user's maxCapacity(maximum numbers).
     } else {
-        greenState();
+        updateUI('green');
     }
 }
 
-// POSSIBLE STATES:
+/** Defines cases and their respective styles in order to update the UI appropriately. */
+function updateUI(stateType) {
+    let borderStyle, backgroundColor, textColor, message;
 
-/** Defines amberState for use in updateUI function (triggered when threshold is reached). */
-function amberState() {
-    document.body.style.backgroundColor = "#FDBA6E";
-    document.body.style.color = "#0C343D";
-    message.innerHTML = `You are nearing capacity. <br> Only ${remaining} remaining.`;
-}
-
-/** Defines redState for use in updateUI function (trigged when maxCapacity is reached). */
-function redState() {
-    document.getElementById('message').style.border = "none";
-    document.body.style.backgroundColor = "#F1B7C4";
-    document.body.style.color = "#5F071C";
-    message.innerHTML = "You have reached capacity.";
-}
-
-/** Defines overCapacityState for use in updateUI function (triggered when maxCapacity is exceeded). */
-function overCapacityState() {
-    document.getElementById('message').style.border = "medium solid #000000";
-    document.body.style.backgroundColor = "#EC8D8D";
-    document.body.style.color = "#000000";
-    message.innerHTML = `You have exceeded the maximum capacity of ${maxCapacity}.`;
-}
-
-/** Defines greenState for use in updateUI function (default state). */
-function greenState() {
-    document.getElementById('message').style.border = "none";
-    document.body.style.backgroundColor = "#B8EAD1";
-    document.body.style.color = "#0C343D";
-    message.innerHTML = `All good. <br> ${remaining} ${units} remaining until capacity.`;
+    switch (stateType) {
+        case 'green':
+            borderStyle = 'none';
+            backgroundColor = '#B8EAD1';
+            textColor = '#0C343D';
+            message = `All good. <br> ${remaining} ${units} remaining until capacity.`;
+            break;
+        case 'amber':
+            borderStyle = 'none';
+            backgroundColor = '#FDBA6E';
+            textColor = '#0C343D';
+            message = `You are nearing capacity. <br> Only ${remaining} remaining.`;
+            break;
+        case 'red':
+            borderStyle = 'none';
+            backgroundColor = '#F1B7C4';
+            textColor = '#5F071C';
+            message = 'You have reached capacity.';
+            break;
+        case 'error':
+            borderStyle =  'medium solid #000000';
+            backgroundColor = '#EC8D8D';
+            textColor = '#000000';
+            message = `You have exceeded the maximum capacity of ${maxCapacity}.`;
+            break;
+        default:
+            break;
+    }
+    document.getElementById('message').style.border = borderStyle;
+    document.body.style.backgroundColor = backgroundColor;
+    document.body.style.color = textColor;
+    document.getElementById('message').innerHTML = message;
 }
 
 /** Confirms the user's intention before reloading the page to start over with new parameters */
