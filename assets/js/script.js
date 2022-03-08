@@ -65,7 +65,7 @@ function calculateRemaning() {
 }
 
 /** Increases the currentQty and updates the UI accordingly. */
-function increase() {
+function incrementCounter() {
     currentQty += 1;
     count.innerHTML = currentQty;
     calculateRemaning();
@@ -73,7 +73,7 @@ function increase() {
 }
 
 /** Decreases the currentQty and updates the UI accordingly. */
-function decrease() {
+function decrementCounter() {
     if (currentQty <= 0) {
         // Prevents currentQty from entering negative numbers.
         alert('Whoops! Cannot go below 0.');
@@ -145,8 +145,8 @@ function confirmReset() {
 function initEventListeners() {
     // EVENT LISTENERS:
     parameters.addEventListener('submit', onParametersSubmit);
-    plusButton.addEventListener('click', increase);
-    minusButton.addEventListener('click', decrease);
+    plusButton.addEventListener('click', incrementCounter);
+    minusButton.addEventListener('click', decrementCounter);
     resetButton.addEventListener('click', confirmReset);
     /* For accessibility, the following ensures that the Enter key will trigger the same event as a click event. Credit for this solution to: https://stackoverflow.com/questions/14542062/eventlistener-enter-key */
     resetButton.addEventListener('keypress', function(e){
