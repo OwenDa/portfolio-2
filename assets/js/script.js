@@ -23,17 +23,17 @@ let resetButton = document.getElementById('reset');
 function onParametersSubmit(event){
     event.preventDefault();
     units = document.getElementById('unit-input').value;
-    unitDisplay.innerHTML = units;
     maxCapacity = parseInt(document.getElementById('max-input').value);
     threshold = parseInt(document.getElementById('threshold-input').value);
-    checkInput();
-    closeModal();
+    validateInput();
+    closeParametersForm();
+    unitDisplay.innerHTML = units;
 }
 
 /** Warns the user and throws error if the threshold(warning number) entered is greater than
  * their chosen maxCapacity value(maximum number that can be accomodated).
  */
-function checkInput() {
+function validateInput() {
     if (threshold > maxCapacity) {
         alert('Houston, we have a problem! The maximum number must be higher than your warning number.');
         throw 'Error: threshold(warning number) must be lower than maxCapacity(maximum number).';
@@ -43,7 +43,7 @@ function checkInput() {
 /** Closes the modal-container and all contents, revealing the counter,
  * and allows the user to click through the modal to use the counter.
  */
- function closeModal() {
+ function closeParametersForm() {
      // modal fades out:
     let container = document.getElementById('modal-container');
     container.style.opacity = 0;
