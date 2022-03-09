@@ -17,7 +17,9 @@ Limited capacity is a commonplace consideration within event settings, as well a
 
 While many simple counters exist, few of these possess the option for a user to set their own upper limit and most are designed to count upwards indefinitely. The use of such a tool when dealing with finite numbers creates a number of issues which became particularly apparent during public health restrictions enacted in response to the Covid-19 pandemic which necessitated the widespread use of occupancy-monitoring.
 
-With a background in event management, the developer's goal was to create a tool that could simply and effectively address this problem in an intelligent manner. However, the tool is certainly not limited to use in events, and need not be used to count people but might equally be employed to count a finite resource such as vaccines being administered at walk-in clinics, for example. Similarly, the site might be integrated into an existing UI as part of a suite of tools used within a particular business or environment.
+With a background in event management, the developer's goal was to create a tool that could simply and effectively address this problem in an intelligent manner. However, the tool is certainly not limited to use in events, and need not be used to count people but might equally be employed to count a finite resource such as vaccines being administered at walk-in clinics, for example. Similarly, the site might be integrated into an existing UI as part of a suite of tools used within a particular business or environment.  
+  
+<img src="assets/images/ui-screenshots/am-i-responsive-2.png" alt="Capacity Counter as simulated by ami.responsivedesign.is on various screen sizes." width="75%" height="auto">  
   
 ## User Stories  
   **Types of User** 
@@ -111,7 +113,18 @@ Each of these states is reversible. This means that, in situations where the cou
   
 Should the user wish to begin again with new parameters, they can make use of the "Start Over" reset button. This control is tabbable and responds either to a click or, when in focus, the Enter key. To reduce user error, a confirmation message is shown ensuring the user understands that this action will erase their current settings and begin from scratch.  
   
-<img src="assets/images/ui-screenshots/capacity-counter-confirm-reset.png" alt="The error message described in the preceding text." width="75%" height="auto">
+<img src="assets/images/ui-screenshots/capacity-counter-confirm-reset.png" alt="The error message described in the preceding text." width="75%" height="auto">  
+  
+For mobile users, the following screenshots represent the various states as seen on the Pixel 5 and Samsumg S8+:
+  
+<img src="assets/images/ui-screenshots/capacity-counter-initial-state-pixel5.png" alt="The UI's initial state as seen on the Pixel 5." width="25%" height="auto">  
+   
+<img src="assets/images/ui-screenshots/capacity-counter-green-state-pixel5.png" alt="The UI's green state as seen on the Pixel 5." width="25%" height="auto">  
+  
+<img src="assets/images/ui-screenshots/capacity-counter-amber-state-samsungs8.png" alt="The UI's amber state as seen on the Samsumg S8+." width="25%" height="auto">  
+  
+<img src="assets/images/ui-screenshots/capacity-counter-red-state-samsungs8.png" alt="The UI's red state as seen on the Samsumg S8+." width="25%" height="auto">
+
 
 ## Testing  
 ### Manual Testing  
@@ -190,4 +203,5 @@ Forking a repository does not create locally-stored copies of its files on your 
 6. [Stack Overflow](https://stackoverflow.com/) was consulted several times, largely to verify syntax.  
 7. As indicated by the automatically generated credit preserved in the CSS file, the CSS code was prefixed by [Autoprefixer](https://autoprefixer.github.io).  
 8. This [Nathan Sebhastian article concerning confirmation dialogs](https://sebhastian.com/javascript-confirmation-yes-no/) was used for reference in setting up the reset option.  
-9. The image used to accompany the "Start Over" reset option was found via [iconfinder.com](https://www.iconfinder.com/icons/383083/refresh_reload_icon).
+9. The image used to accompany the "Start Over" reset option was found via [iconfinder.com](https://www.iconfinder.com/icons/383083/refresh_reload_icon).  
+10. [ami.responsivedesign.is](http://ami.responsivedesign.is/) was used to generate a screenshot simulating the UI on various screensizes and device types.
