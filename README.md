@@ -98,10 +98,14 @@ Once the form has been submitted, the user will hear a prompt to use the buttons
 JavaScript code was run through JSHint.com with no errors or warnings.  
 <img src="assets/images/js-hint-screencap.png" alt="JSHint.com identifies no errors and issues no warnings in relation to the JavaScript code." width="90%" height="auto"> 
 
-Both CSS and HTML were validated through the W3C's official validators, and code was found to be valid in each case. There were no errors, and the only warnings present were identifying vendor extensions added via [Autoprefixer](https://css-tricks.com/autoprefixer/) to improve browser compatibility.  
-<img src="assets/images/html-validation.png" alt="HTML validator results indicated the HTML code in this project is valid." width="90%" height="auto">  
+Both CSS and HTML were validated through the W3C's official validators. There were no errors in the CSS and the only warnings present were identifying vendor extensions added via [Autoprefixer](https://css-tricks.com/autoprefixer/) to improve browser compatibility.  
+<img src="assets/images/css-validation.png" alt="CSS validator results indicated the CSS in this project is valid." width="90%" height="auto">  
   
-<img src="assets/images/css-validation.png" alt="CSS validator results indicated the CSS in this project is valid." width="90%" height="auto">
+HTML was also found valid, with the only error being the lack of `alt` attribute on the reset arrow image. This omission is very much by design as the image is purely decorative (and `aria-hidden` is set to `true` as a result), and it forms part of a clickable-div which is appropriately announced by a screenreader with the phrase "Clickable: Start Over". The term clickable is added by the screenreader itself, while the phrase "Start Over" is drawn from the text content of the div. Alt-text in this instance would be redundant and potentially confusing.  
+
+<img src="assets/images/html-validation-screencap.png" alt="HTML validator results indicated the HTML code in this project is valid with the only error being the intentional omission of alt-text where it would not serve the user." width="90%" height="auto">  
+  
+
 <p>
     <a href="http://jigsaw.w3.org/css-validator/check/referer">
         <img style="border:0;width:88px;height:31px"
