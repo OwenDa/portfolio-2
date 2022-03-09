@@ -156,7 +156,7 @@ function initEventListeners() {
         if (e.key === 'Enter') {
             confirmReset();
         }
-    })
+    });
 
 }
 
