@@ -173,3 +173,12 @@ button {
     }
 
 }
+
+@media screen and (max-width: 392px) {
+    #count, #unit-display {
+        display: block;
+        clear: both;
+        text-align: center;
+    }
+
+}
