@@ -8,8 +8,9 @@
 3. [Tech Stack](#tech-stack)  
 4. [Design Statement](#design-statement)
 5. [Features](#features)
+    + [Future Features](#future-features)
 6. [Testing](#testing)
-7. [Deployment](#deployment)
+7. [Deployment](#deployment)  
 8. [Acknowledgements](#acknowledgements)  
   
 ## Problem Statement  
@@ -123,9 +124,15 @@ For mobile users, the following screenshots represent the various states as seen
   
 <img src="assets/images/ui-screenshots/capacity-counter-amber-state-samsungs8.png" alt="The UI's amber state as seen on the Samsumg S8+." width="25%" height="auto">  
   
-<img src="assets/images/ui-screenshots/capacity-counter-red-state-samsungs8.png" alt="The UI's red state as seen on the Samsumg S8+." width="25%" height="auto">
-
-
+<img src="assets/images/ui-screenshots/capacity-counter-red-state-samsungs8.png" alt="The UI's red state as seen on the Samsumg S8+." width="25%" height="auto">  
+  
+### Future Features  
+It may be nice to add a simple checkbox, checked by default, which accepts zero as the starting position. When unchecked, an accompanying number input (spin button) would change from disabled to enabled, allowing the user to input a different starting number if they wished.  
+  
+While this counter focuses on not exceeding the user's upper limit, there are scenarios in which a very similar UI could be implemented for a user wishing to reach an upward goal. In this case, the colour scheme could simply be reversed and the message changed accordingly (ie. where the user wishes to reach a minimum capacity or occupancy, rather than avoid exceeding it). A simple radio button at the point of setting parameters could determine which version of the tool the user wished to implement.  
+  
+While the developer wished to keep the colour scheme quite definite and have changes be indicative of the various states, an alternative version of the project might have stored a spectrum of colours in an array and then divided the difference between the starting point and the maximum capacity by the length of that array to create step-wise changes in colour. In this version of the project, the user would travel through the gradients of colour from green to red in a smoother fashion without sudden changes. In this instance, that was felt to be unhelpful as the colour changes draw the user's attention to changes, but it is an alternate version that might have been useful in select circumstances. In a more complete UI, this feature could be an option presented to the user.  
+  
 ## Testing  
 ### Manual Testing  
 In large part, testing was carried out manually through the development process, checking that each function worked as expected and checking whether various user behaviours or choices were appropriately handled.  
