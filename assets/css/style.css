@@ -42,14 +42,14 @@ body {
     width: 90%;
     padding: 1.2rem;
     background-color: #ffffff;
-    margin: 20px 0 0 0;
+    margin: 1.25rem 0 0 0;
     border: 0;
     border-radius: 2%;
 }
 
 p {
     font-size: 1.2rem;
-    margin: 15px 0 20px 0;
+    margin: .94rem 0 1.25rem 0;
     text-align: justify;
 }
 
@@ -65,15 +65,15 @@ p {
 label {
     text-align: right;
     font-size: 1.2rem;
-    margin: 2px 7.5px 20px 15px;
+    margin: 2px .47rem 1.25rem .94rem;
 }
 
 .answer-box {
     text-align: left;
-    margin: 2px 0 20px 10px;
-    min-height: 30px;
+    margin: 2px 0 1.25rem .63rem;
+    min-height: 1.88rem;
     font-size: 1.2rem;
-    padding: .5px;
+    padding: .03rem;
 }
 
 #begin-button {
@@ -123,19 +123,19 @@ h2 {
 }
 
 #message {
-    margin: 5px 0 10px 0;
+    margin: .3rem 0 .63rem 0;
     font-size: 1.2rem;
     width: 310px;
-    min-height: 55px;
+    min-height: 3.4rem;
     text-align: center;
-    padding: 2.5px;
+    padding: .16rem;
 }
 
 button {
     font-size: 5rem;
-    height: 145px;
-    width: 145px;
-    margin: 5px 2px 30px 2px;
+    height: 9.6rem;
+    width: 9.6rem;
+    margin: .3rem 2px 1.88rem 2px;
 }
 
 #reset, #reset p {
@@ -158,12 +158,12 @@ button {
     label {
         text-align: left;
         font-size: 1.2rem;
-        margin: 2px 0 10px 2px;
+        margin: 2px 0 .63rem 2px;
     }
 
     .answer-box {
         text-align: left;
-        margin: 2px 0 20px 2px;
+        margin: 2px 0 1.25rem 2px;
     }
 
     #modal {

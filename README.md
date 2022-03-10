@@ -204,4 +204,4 @@ Forking a repository does not create locally-stored copies of its files on your 
 7. As indicated by the automatically generated credit preserved in the CSS file, the CSS code was prefixed by [Autoprefixer](https://autoprefixer.github.io).  
 8. This [Nathan Sebhastian article concerning confirmation dialogs](https://sebhastian.com/javascript-confirmation-yes-no/) was used for reference in setting up the reset option.  
 9. The image used to accompany the "Start Over" reset option was found via [iconfinder.com](https://www.iconfinder.com/icons/383083/refresh_reload_icon).  
-10. [ami.responsivedesign.is](http://ami.responsivedesign.is/) was used to generate a screenshot simulating the UI on various screensizes and device types.
+10. [ami.responsivedesign.is](http://ami.responsivedesign.is/) was used to generate a screenshot simulating the UI on various screen sizes and device types.
