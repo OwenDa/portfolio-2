@@ -42,7 +42,7 @@ function validateInput() {
  * and allows the user to click through the modal to use the counter.
  */
  function closeParametersForm() {
-     // modal fades out:
+     // form modal fades out:
     let container = document.getElementById('modal-container');
     container.style.opacity = 0;
     container.style.pointerEvents = 'none';
@@ -145,8 +145,8 @@ function confirmReset() {
     }
 }
 
+/** Initiates all event listeners */
 function initEventListeners() {
-    // EVENT LISTENERS:
     parameters.addEventListener('submit', onParametersSubmit);
     plusButton.addEventListener('click', incrementCounter);
     minusButton.addEventListener('click', decrementCounter);
